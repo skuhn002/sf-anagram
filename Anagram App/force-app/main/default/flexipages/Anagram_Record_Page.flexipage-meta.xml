@@ -73,12 +73,12 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Solution__c</fieldItem>
                 <identifier>Recordanagram_Solution_cField</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.Solution__c}</leftValue>
-                        <operator>EQUAL</operator>
-                    </criteria>
-                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Puzzle__c</fieldItem>
+                <identifier>Recordanagram__Puzzle__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-5417e600-8dcd-4099-b5d4-d430ba0748bd</name>
