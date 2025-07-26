@@ -2,11 +2,12 @@
   "packageDirectories": [
     {
       "path": "force-app",
-      "default": true
+      "default": true,
+      "namespace": "anagram"
     }
   ],
   "name": "Anagram App",
-  "namespace": "",
+  "namespace": "anagram",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "64.0"
 }
