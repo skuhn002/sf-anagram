@@ -3,11 +3,9 @@ public class AnagramTriggerHandler {
         anagram.anagram__Puzzle__c = '';
         String puzzle = '';
         List<String> words = anagram.anagram__Solution__c.split(' ');
-        System.debug(words);
         
         Integer indicesToLastWord = words.size() - 1;
         for(String word : words){
-            System.debug('Indices To Last Word: ' + indicesToLastWord);
             if(indicesToLastWord != 0){
 				anagram.anagram__Puzzle__c += AnagramTriggerHandler.rearrangeWord(word) + ' ';   
             } else {
@@ -15,22 +13,25 @@ public class AnagramTriggerHandler {
             }
             indicesToLastWord --;
         }
-        
-        System.debug('Sam Test 2: ' + anagram.anagram__Puzzle__c);
+        System.debug(anagram.anagram__Puzzle__c);
     }
     
     public static String rearrangeWord(String word) {
-        if (String.isBlank(word)) {
-            return '';
-        }
-        List<String> chars = word.split('');
-        List<String> remaining = new List<String>(chars);
         String shuffled = '';
-        while (!remaining.isEmpty()) {
-            Integer randomIndex = (Integer)(Math.random() * remaining.size());
-            shuffled += remaining[randomIndex];
-            remaining.remove(randomIndex);
-        }
+        do{
+            if (String.isBlank(word)) {
+                return '';
+            }
+            shuffled = '';
+            List<String> chars = word.split('');
+            List<String> remaining = new List<String>(chars);
+            while (!remaining.isEmpty()) {
+                Integer randomIndex = (Integer)(Math.random() * remaining.size());
+                shuffled += remaining[randomIndex];
+                remaining.remove(randomIndex);
+            }
+    	} while(word == shuffled);
+        
         return shuffled.toUpperCase();
     }
 }
