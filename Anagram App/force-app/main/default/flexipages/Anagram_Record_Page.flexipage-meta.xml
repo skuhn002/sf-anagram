@@ -73,12 +73,33 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Solution__c</fieldItem>
                 <identifier>Recordanagram_Solution_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Hide_Solution__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Puzzle__c</fieldItem>
                 <identifier>Recordanagram__Puzzle__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Hide_Solution__c</fieldItem>
+                <identifier>Recordanagram__Hide_Solution__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-5417e600-8dcd-4099-b5d4-d430ba0748bd</name>
