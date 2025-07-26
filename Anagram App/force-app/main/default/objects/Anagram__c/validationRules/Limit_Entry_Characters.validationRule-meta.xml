@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Limit_Entry_Characters</fullName>
+    <active>true</active>
+    <description>Please only enter letters and spaces</description>
+    <errorConditionFormula>NOT(REGEX(Solution__c, &apos;^[a-zA-Z ]*$&apos;))</errorConditionFormula>
+    <errorDisplayField>Solution__c</errorDisplayField>
+    <errorMessage>Please only enter letters and spaces</errorMessage>
+</ValidationRule>
